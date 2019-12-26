@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "yauApp",
+    "name": "bonheur.app",
     "slug": "mobileApp",
     "privacy": "public",
     "sdkVersion": "36.0.0",
@@ -9,9 +9,9 @@
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "0.0.1",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/troll.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -25,6 +25,9 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.yaumin.bonheurApp"
     }
   }
 }
