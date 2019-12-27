@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 import { Audio, Video } from 'expo-av';
 
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import HomeScreen from './HomeScreen';
 import SoundScreen from './SoundScreen';
@@ -19,4 +19,3 @@ const MainNavigator = createStackNavigator({
 const App = createAppContainer(MainNavigator);
 
 export default App;
-
