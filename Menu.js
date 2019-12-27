@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 import { useNavigation } from 'react-navigation-hooks';
 
-const Menu = ( { page = null } ) => {
+const Menu = ({ page = null }) => {
 
     const { navigate } = useNavigation();
 
     return (
         <View style={styles.container}>
-            { page !== 'Home' &&
+            {page !== 'Home' &&
                 <View style={styles.buttonContainer}>
                     <Button onPress={() => {
                         navigate('Home');
@@ -18,7 +18,7 @@ const Menu = ( { page = null } ) => {
                     />
                 </View>
             }
-            { page !== 'Settings' &&
+            {page !== 'Settings' &&
                 <View style={styles.buttonContainer}>
                     <Button onPress={() => {
                         navigate('Settings');
@@ -37,17 +37,17 @@ Menu.navigationOptions = {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#FFF',
-      flexDirection: 'column',
-      justifyContent: 'space-around',
-      alignItems: 'center',
-      borderBottomWidth: 15,
-      borderColor: '#242134',
+        flex: 1,
+        backgroundColor: '#FFF',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        borderBottomWidth: 15,
+        borderColor: '#242134',
     },
     buttonContainer: {
         marginHorizontal: 20,
     },
-  });
+});
 
 export default Menu;
