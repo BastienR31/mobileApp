@@ -12,8 +12,8 @@ import SoundScreen from './SoundScreen';
 import SettingsScreen from './SettingsScreen';
 
 const MainNavigator = createStackNavigator({
-  Home: {screen: HomeScreen},
-  Settings: {screen: SettingsScreen},
+  Home: { screen: HomeScreen },
+  Settings: { screen: SettingsScreen }
 });
 
 const App = createAppContainer(MainNavigator);

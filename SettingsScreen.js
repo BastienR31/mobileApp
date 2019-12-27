@@ -1,15 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
+import Menu from './Menu';
+
 const SettingsScreen = () => {
 
     return (
-        <Text>Settings</Text>
+        <>
+            <Menu page={'Settings'}></Menu>
+            <Text>Settings Land</Text>
+        </>
     );
 }
 
 SettingsScreen.navigationOptions = {
-    title: 'Home'
-}
+    title: 'Lol'
+};
 
 export default SettingsScreen;
