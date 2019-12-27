@@ -1,0 +1,20 @@
+import React, {useState, useEffect} from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+
+import Menu from './Menu';
+
+const HomeScreen = () => {
+
+    return (
+        <>
+            <Menu page={'Home'}></Menu>
+            <Text>Home Land</Text>
+        </>
+    );
+}
+
+HomeScreen.navigationOptions = {
+    title: 'Kikoo'
+};
+
+export default HomeScreen;
