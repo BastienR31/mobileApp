@@ -4,32 +4,29 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { useNavigation } from 'react-navigation-hooks';
 
 const Menu = ({ page = null }) => {
-
     const { navigate } = useNavigation();
 
     return (
         <View style={styles.container}>
-            {page !== 'Home' &&
+            {page !== 'Home' && (
                 <View style={styles.buttonContainer}>
-                    <Button onPress={() => {
-                        navigate('Home');
-                    }}
+                    <Button
+                        onPress={() => { navigate('Home'); }}
                         title="Go Home"
                     />
                 </View>
-            }
-            {page !== 'Settings' &&
+            )}
+            {page !== 'Settings' && (
                 <View style={styles.buttonContainer}>
-                    <Button onPress={() => {
-                        navigate('Settings');
-                    }}
+                    <Button
+                        onPress={() => { navigate('Settings'); }}
                         title="Go Settings"
                     />
                 </View>
-            }
+            )}
         </View>
     );
-}
+};
 
 Menu.navigationOptions = {
     title: 'Menu'
