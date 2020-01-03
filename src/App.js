@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
-
-import { StyleSheet, Text, View, Button } from 'react-native';
-
-import { Audio, Video } from 'expo-av';
+import { registerRootComponent } from 'expo';
 
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import HomeScreen from './HomeScreen';
-import SoundScreen from './SoundScreen';
+//import HomeScreen from './HomeScreen';
+
+import HomeScreen from 'Screens/HomeScreen/index.js';
+// import SoundScreen from './SoundScreen';
 import SettingsScreen from './SettingsScreen';
 
 const MainNavigator = createStackNavigator({
@@ -18,4 +16,4 @@ const MainNavigator = createStackNavigator({
 
 const App = createAppContainer(MainNavigator);
 
-export default App;
+export default registerRootComponent(App);

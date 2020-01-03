@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "bonheur.app",
+    "entryPoint": "./src/App.js",
     "slug": "mobileApp",
     "privacy": "public",
     "sdkVersion": "36.0.0",

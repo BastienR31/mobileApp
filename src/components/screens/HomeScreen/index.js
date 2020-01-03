@@ -14,7 +14,7 @@ const HomeScreen = () => {
 };
 
 HomeScreen.navigationOptions = {
-    title: 'Kikoo'
+    title: 'Beurre de cacahuètes'
 };
 
 export default HomeScreen;
