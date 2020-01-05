@@ -14,7 +14,7 @@ const SettingsScreen = () => {
 }
 
 SettingsScreen.navigationOptions = {
-    title: 'Lol'
+    title: 'Settings'
 };
 
 export default SettingsScreen;
