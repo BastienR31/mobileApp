@@ -18,9 +18,18 @@ module.exports = {
       "ObjectPattern": { "multiline": true },
       "ImportDeclaration": "never",
       "ExportDeclaration": { "multiline": true, "minProperties": 3 }
-    }]
+    }],
+    "import/no-unresolved": "off"
   },
   'globals': {
     "fetch": false
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }

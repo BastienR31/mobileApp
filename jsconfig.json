@@ -7,6 +7,9 @@
             "Screens/*": [
                 "src/components/screens/*"
             ],
+            "HomeScreen": [
+                "src/components/screens/HomeScreen/index.js"
+            ],
             "Components/*": [
                 "src/components/*"
             ],
@@ -15,6 +18,9 @@
             ]
         }
     },
+    "include": [
+        "./src/**/*"
+    ],
     "exclude": [
         "node_modules",
         "dist"
