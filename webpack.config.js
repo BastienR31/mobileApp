@@ -9,7 +9,9 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.json', '.css'],
         alias: {
-            Screens: path.resolve(__dirname, './src/components/screens/')
+            Screens: path.resolve(__dirname, 'src/components/screens/'),
+            Components: path.resolve(__dirname, 'src/components/'),
+            HomeScreen: path.resolve(__dirname, 'src/components/screens/HomeScreen/index.js')
         }
     },
 };
