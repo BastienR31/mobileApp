@@ -1,26 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
-
-import { connect } from 'react-redux';
-
+import PropTypes from 'prop-types';
 import Menu from '@organisms/Menu';
 
-import { getMarsWeatherData, getImagesFromCuriosity } from '@api/nasa';
+import { getMarsDataFromApi } from '../../../stores/thunks';
 
-import { Ionicons, AntDesign } from '@expo/vector-icons';
+// import { getMarsWeatherData, getImagesFromCuriosity } from '@api/nasa';
 
-const HomeScreen = () => {
+import { AntDesign } from '@expo/vector-icons';
+
+const HomeScreen = ({
+    getMarsWeatherData
+}) => {
     const [data, setData] = useState(null);
     const [image, setImage] = useState(null);
 
     useEffect(() => {
         // Récupère toutes les data
-        getMarsWeatherData().then((nasaData) => setData(nasaData));
-
-        getImagesFromCuriosity().then((curiosityImage) => setImage(curiosityImage));
+        // getMarsWeatherData();
+        console.log('getMarsWeatherData', getMarsWeatherData);
+        // getImagesFromCuriosity().then((curiosityImage) => setImage(curiosityImage));
+        getMarsDataFromApi();
     }, []);
 
-    console.log(data);
+    console.log('data', data);
+
+    console.log('TEST');
 
     return (
         <>
@@ -33,8 +38,17 @@ const HomeScreen = () => {
             <Text>{data && data.Last_UTC}</Text>
 
             <Image
-                style={{width: '100%', height: 400}}
-                source={{uri: image}}
+                style={
+                    {
+                        width: '100%',
+                        height: 400
+                    }
+                }
+                source={
+                    {
+                        uri: image
+                    }
+                }
             />
 
         </>
@@ -50,5 +64,10 @@ HomeScreen.navigationOptions = {
     title: 'Home',
     headerLeft: <AntDesign name="bars" size={32} color="black" />
 };
+
+// HomeScreen.propTypes = {
+//     getMarsWeatherData: PropTypes.func
+// };
+
 
 export default HomeScreen;
